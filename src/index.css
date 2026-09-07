@@ -1,0 +1,14 @@
+/* src/index.css (ou combine com seu arquivo global) */
+* { box-sizing: border-box; }
+html,body,#root { height: 100%; }
+body { margin: 0; font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale; background: #fff; color: #111; }
+
+/* garante que o conteúdo principal não fique oculto atrás do header fixo */
+:root { --header-height: 72px; } /* valor default (o Header.css ajusta via media queries) */
+.page-root, main, .home-content {
+  padding-top: calc(var(--header-height) + 12px);
+  /* permitir rolagem normal em dispositivos pequenos */
+}
+
+/* pequenas melhorias de acessibilidade */
+a { color: inherit; }
